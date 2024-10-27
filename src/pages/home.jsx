@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import Navbar from '../components/header';
 export default function Home(){
     const nav = useNavigate()
-
+ 
     function ImageHolder(e){
         const imgHolder = document.querySelector('#img_holder')
         imgHolder.addEventListener("wheel", (event) => {
@@ -18,15 +18,16 @@ export default function Home(){
             
             <div id="home"  className='w-[100%]' >
             <Navbar bg={'#FFFFFF33'}/>
-        <div id="hero"  style={{height:'800px'}}>
+        <div id="hero"  style={{height:'800px',background: 'rgba(282, 267, 255, -2.5)',backdropFilter: 'blur(5px)'}}>
             <div id="heroText"  >
-                <h1 style={{marginTop:'7.5rem'}}>Revolutionize Your <br/> Financial Processes </h1>
-                <h2 className='font-geist'>With NEO CFO</h2>
+                <h1 style={{marginTop:'7.5rem'}}>Revolutionize your <br/> Financial Processes </h1>
+                <h3 className='font-geist'>with Neo CFO</h3>
                 <p className='font-geist'>Streamline Accounting, Finance and Taxation with our cutting edge automation platform with our best
                     in class Integrations</p>
             </div>
             <div id="heroImage" className='mt-14' style={{height:'600px'}}>
-                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png " className='ml-20' style={{height:'660px'}} alt="image"/>
+                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png " className='ml-10' style={{ height: '687px', maxWidth: '110%' }}
+ alt="image"/>
             </div>
         </div>
             </div>
