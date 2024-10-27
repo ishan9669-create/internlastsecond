@@ -130,10 +130,10 @@ const StoryCarousel = () => {
   };
 
   return (
-    <div className="relative bottom-[700px] w-full h-[400px] p-5 mt-3 rounded-lg">
-        <div className="flex justify-start items-center ml-8">
+    <div className="relative bottom-[700px] w-full h-[400px]   p-5 rounded-lg">
+        <div className="flex justify-start items-center ">
   <div className='flex flex-col  justify-center ml-0  w-screen '>
-  <div className="flex     gap-3 mb-4 md:mt-0 ml-[300px] sm:ml-[1260px]">
+  <div className="flex   gap-3 mb-4 ml-[300px] sm:ml-[1260px]">
     <button
         onClick={scrollLeft}
         className="  bg-[#FFFFFF33] text-[#FFFFFF] px-5 rounded-full hover:bg-gray-600 "
@@ -150,7 +150,7 @@ const StoryCarousel = () => {
     </div>
 
     <div
-        className="flex gap-2 sm:ml-[150px] overflow-hidden overflow-x-scroll no-scrollbar"
+        className="flex gap-2 px-32 no-scrollbar  w-screen overflow-x-scroll "
         ref={carouselRef}
         style={{ transition: `transform ${transitionDuration}ms ease-in-out` }}
       >
@@ -158,7 +158,7 @@ const StoryCarousel = () => {
         {stories.map((story) => (
           <div
             key={story.id} 
-            className="flex-shrink-0 w-72 h-[450px] flex rounded-lg p-1"
+            className="flex-shrink-0  w-72 h-[450px] rounded-lg p-4"
           >
             <img src={story.image} alt={story.alt} className="w-full h-full rounded-lg" />
           </div>
