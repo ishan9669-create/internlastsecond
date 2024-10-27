@@ -130,10 +130,10 @@ const StoryCarousel = () => {
   };
 
   return (
-    <div className="bottom-[580px] md:bottom-[500px] w-full h-[400px] flex justify-center items-center  relative   p-5 mt-8 rounded-lg">
-        <div className="flex flex-col justify-center ml-[57vw] items-center mt-32 md:mt-5 text-center">
-  <div className='flex  justify-center ml-0 sm:ml-[400px] w-screen '>
-  <div className="flex    gap-3 mt-2 md:mt-0">
+    <div className="relative bottom-[700px] w-full h-[400px] p-5 mt-3 rounded-lg">
+        <div className="flex justify-start items-center ml-8">
+  <div className='flex flex-col  justify-center ml-0  w-screen '>
+  <div className="flex     gap-3 mb-4 md:mt-0 ml-[300px] sm:ml-[1260px]">
     <button
         onClick={scrollLeft}
         className="  bg-[#FFFFFF33] text-[#FFFFFF] px-5 rounded-full hover:bg-gray-600 "
@@ -148,35 +148,117 @@ const StoryCarousel = () => {
         &gt;
       </button>
     </div>
-  </div>
-    
-   
+
     <div
-        className="flex gap-2 mb-72   h-[400px]"
+        className="flex gap-2 sm:ml-[150px] overflow-hidden overflow-x-scroll no-scrollbar"
         ref={carouselRef}
-        style={{ transition: `transform ${transitionDuration}ms ease-in-out`, overflow: 'hidden' }}
+        style={{ transition: `transform ${transitionDuration}ms ease-in-out` }}
       >
         {/* Story Cards */}
         {stories.map((story) => (
           <div
             key={story.id} 
-            className="flex-shrink-0 w-72    rounded-lg  p-4 text-center"
+            className="flex-shrink-0 w-72 h-[450px] flex rounded-lg p-1"
           >
-            <img src={story.image} alt={story.alt} className="w-full h-full bg-opacity-45  rounded-lg " />
+            <img src={story.image} alt={story.alt} className="w-full h-full rounded-lg" />
           </div>
         ))}
       </div>
+  </div>
+ 
+   
+  
 </div>
-      {/* Left Arrow Button */}
-      
-      {/* Story Track Container */}
-      
-
-      {/* Right Arrow Button */}
      
-    </div>
+  </div>
   );
 };
+
+// const StoryCarousel = () => {
+//   const [stories, setStories] = useState(storiesData);
+//   const [isTransitioning, setIsTransitioning] = useState(false);
+//   const carouselRef = useRef(null);
+
+//   // Smooth transition duration
+//   const transitionDuration = 300; // in milliseconds
+
+//   // Scroll the carousel to the right
+//   const scrollRight = () => {
+//     if (isTransitioning) return; // Prevent multiple clicks during transition
+
+//     setIsTransitioning(true);
+//     carouselRef.current.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+//     carouselRef.current.style.transform = `translateX(-500px)`; // Move one card width (500px)
+
+//     // After the transition ends, rearrange the order of stories
+//     setTimeout(() => {
+//       const firstStory = stories[0];
+//       const newStories = stories.slice(1).concat(firstStory);
+//       setStories(newStories);
+//       carouselRef.current.style.transition = 'none'; // Remove transition temporarily to reset position
+//       carouselRef.current.style.transform = 'translateX(0)'; // Reset position to 0
+//       setIsTransitioning(false);
+//     }, transitionDuration);
+//   };
+
+//   // Scroll the carousel to the left
+//   const scrollLeft = () => {
+//     if (isTransitioning) return; // Prevent multiple clicks during transition
+
+//     setIsTransitioning(true);
+//     const lastStory = stories[stories.length - 1];
+//     const newStories = [lastStory].concat(stories.slice(0, -1));
+//     setStories(newStories);
+//     carouselRef.current.style.transition = 'none'; // Temporarily remove transition
+//     carouselRef.current.style.transform = `translateX(-500px)`; // Start from the left (to simulate last story appearing first)
+
+//     // After position is set, we apply the transition for smooth movement
+//     setTimeout(() => {
+//       carouselRef.current.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+//       carouselRef.current.style.transform = 'translateX(0)'; // Move smoothly to the 0 position
+//       setTimeout(() => setIsTransitioning(false), transitionDuration);
+//     }, 20); // Small delay to ensure transition applies
+//   };
+
+//   return (
+//     <div className="relative w-full h-[400px] p-5 mt-8 rounded-lg">
+//       <div className="flex justify-start items-center ml-8">
+//         <button
+//           onClick={scrollLeft}
+//           className="bg-[#FFFFFF33] text-[#FFFFFF] px-5 py-1 rounded-full hover:bg-gray-600 absolute left-0 z-10"
+//         >
+//           &lt;
+//         </button>
+
+//         <div
+//           className="flex gap-2 overflow-hidden"
+//           ref={carouselRef}
+//           style={{ transition: `transform ${transitionDuration}ms ease-in-out` }}
+//         >
+//           {/* Story Cards */}
+//           {stories.map((story) => (
+//             <div
+//               key={story.id}
+//               className="flex-shrink-0 w-72 h-[400px] rounded-lg p-4"
+//             >
+//               <img src={story.image} alt={story.alt} className="w-full h-full rounded-lg" />
+//             </div>
+//           ))}
+//         </div>
+
+//         <button
+//           onClick={scrollRight}
+//           className="bg-[#FFFFFF33] text-[#FFFFFF] px-5 py-1 rounded-full hover:bg-gray-600 absolute right-0 z-10"
+//         >
+//           &gt;
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+
+
 
 
 
