@@ -27,7 +27,7 @@ export default function Home(){
                     in class Integrations</p>
             </div>
             <div id="heroImage" className='mt-1 sm:mt-7' style={{height:'600px'}}>
-                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png " className='ml-20' style={{height:'660px'}} alt="image"/>
+                <img src="./87e2fdadeb7913c22c77c8da3e3b97a3.png " className='sm:ml-20' style={{height:'660px'}} alt="image"/>
             </div>
         </div>
             </div>
