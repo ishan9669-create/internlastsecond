@@ -163,12 +163,12 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
           <h4 className="text-green-950  sm:text-sm mb-2">Enter Details</h4>
           <form className="flex flex-col gap-1 h-[240px] sm:h-[260px] overflow-y-auto scrollbar-thin no-scrollbar  ">
             <label htmlFor="name" className="text-green-950 text-[12px]" >Name *</label>
-            <input type="text" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Name" />
+            <input type="text" className="border border-green-600 bg-inherit p-[4px] rounded-md" placeholder="Enter Your Name" />
   
-            <label htmlFor="email" className="text-green-950 text-[12px]">Email *</label>
-            <input type="email" className="border border-green-600 bg-inherit p-1 rounded-md" placeholder="Enter Your Email" />
+            <label htmlFor="email" className="text-green-950 text-[12px] mt-1">Email *</label>
+            <input type="email" className="border border-green-600 bg-inherit p-[4px] rounded-md" placeholder="Enter Your Email" />
   
-            <label htmlFor="Guest" className="text-green-950 text-[12px] resize-none">Add Guests</label>
+            <label htmlFor="Guest" className="text-green-950 text-[12px] mt-1 resize-none">Add Guests</label>
             <textarea className="border no-scrollbar text-xs overflow-y-hidden border-green-600 bg-inherit py-7 rounded-md" ></textarea> 
   
             <label htmlFor="interest" className="text-green-950 mt-5 text-[12px]">What are you most interested in learning about?</label>
@@ -248,13 +248,13 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
           <input
             type="text"
             value={selectedOption}
-            className="w-full bg-transparent text-[13px] border border-gray-500 text-white h-10 rounded-md focus:outline-none focus:ring-2"
+            className="w-full bg-transparent text-[13px] border border-gray-500 text-white h-8 rounded-md focus:outline-none focus:ring-2"
             readOnly
             onClick={() => setIsOpen(!isOpen)} // Toggle dropdown on click
           />
   
           {/* Dropdown Icon */}
-          <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center px-2 pointer-events-none ">
+          <div className="absolute inset-y-0 right-0 bgre flex flex-col items-center justify-center px-2 pointer-events-none ">
              <IoIosArrowUp className='text-[14px] cursor-pointer'/> 
              <MdKeyboardArrowDown className='text-sm cursor-pointer' /> 
               {/* Chevron Icon */}
@@ -262,16 +262,16 @@ import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
   
           {/* Dropdown Menu */}
           {isOpen && (
-            <div className="absolute mt-1 w-full transition-all duration-500 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+            <div className="absolute mt-1 w-full h-40 transition-all duration-500 bg-white border border-gray-300 rounded-md shadow-lg z-10">
               <ul className="text-gray-900 text-xs">
                 {options.map((option, index) => (
                   <li 
                     key={index}
-                    className="px-4 py-2 mt-2 text-xs cursor-pointer transition-all  duration-500 hover:bg-gray-100 flex justify-between"
+                    className="px-4 py-1 mt-2 font-geist text-[10px] cursor-pointer transition-all  duration-500 hover:bg-gray-100 flex justify-between"
                     onClick={() => handleSelect(option)} // Set selected option on click
                   >
-                    <span className='text-xs'>{option}</span>
-                    {selectedOption === option && <i className="fas fa-check text-green-600 " style={{fontSize:"19px"}}></i>} {/* Check Icon */}
+                    <span className='text-[10px] font-geist'>{option}</span>
+                    {selectedOption === option && <i className="fas fa-check text-green-900 " style={{fontSize:"15px"}}></i>} {/* Check Icon */}
                   </li>
                 ))}
               </ul>
@@ -303,50 +303,40 @@ export default function Schedule(){
 
                 <div id="infoScheduleForms" >
                     <div id="infoForm" className=' font-geist'>
-                        <h3 className='text-white font-geis'>Get in Touch</h3>
+                        <h3 className='text-white font-geis'>Get in Touch</h3>  
                         <p className=' font-geist ' style={{fontSize:'15px'}}>Simply fill out the form below for your demo. <br/>
                             Our team will be in touch shortly to confirm the details.</p>
-                        <form action="">
-                            <label htmlFor="Name" style={{fontSize:'12px'}}>Name *</label> <br/>
-                            <input type="text" name="Name" id="Name" placeholder="Enter Your name"/> <br/>
-                            <label htmlFor="Email" style={{fontSize:'12px'}}>Email *</label> <br/>
+                        <form className='flex flex-col gap-1'>
+                          <div>
+                          <label htmlFor="Name" style={{fontSize:'12px'}}>Name *</label> <br/>
+                          <input type="text" name="Name" id="Name" placeholder="Enter Your name" /> <br/>
+                          </div>
+                            
+                            <div>
+                            <label htmlFor="Email" style={{fontSize:'12px'}}  >Email *</label> <br/>
                             <input type="email" name="Email" id="Email" placeholder="Enter your Email"/><br/>
+                            </div>
+                            
+                            <div>
                             <label htmlFor="Company" style={{fontSize:'12px'}}>Company *</label> <br/>
                             <input type="text" name="Company" id="Company" placeholder="Enter your Company Name"/><br/>
+                            </div>
                             
+                            <div>
+                            <label class="block text-white  " style={{fontSize:'12px',marginTop:'10px'}}>Accounting software you rely on</label>
+                            <Dropdown/>
+                            </div>
                             
-<label class="block text-white  " style={{fontSize:'12px',marginTop:'10px'}}>Accounting software you rely on</label>
+                           <div>
+                           <label htmlFor="Message" style={{fontSize:'12px'}}>Message</label> <br/>
+                            <textarea name="Message" id="Message"></textarea><br/>
 
-
-{/* <div class="relative">
-  <input type="text" value="Zoho Books" class="w-full bg-transparent border border-gray-500 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" readonly />
-
-  
-  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-    <i class="fas fa-chevron-down text-gray-500"></i>
-  </div>
-
-  
-  <div class="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
-    <ul class="text-gray-900 text-sm">
-      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100 flex justify-between">
-        <span>Zoho Books</span>
-        <i class="fas fa-check text-green-500"></i> 
-      </li>
-      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Tally</li>
-      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Vyapaar</li>
-      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Busy</li>
-      <li class="px-4 py-2 cursor-pointer hover:bg-gray-100">Others</li>
-    </ul>
-  </div>
-</div> */}
-<Dropdown/>
+                            </div> 
 
                                
-                            <label htmlFor="Message" style={{fontSize:'12px'}}>Message</label> <br/>
-                            <textarea name="Message" id="Message"></textarea><br/>
+                           
                             <div className='flex justify-end mt-6'>
-                            <button className='bg-white text-green-700 px-5 mt-4 py-1 rounded-sm text-xs'>SUBMIT</button>
+                            <button className='bg-white text-green-700 px-5 mt-1 py-1 rounded-sm text-xs'>SUBMIT</button>
                             </div>
                         </form>
                     </div>
