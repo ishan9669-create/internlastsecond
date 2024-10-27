@@ -13,7 +13,7 @@
       <h2 class="text-sm sm:text-md md:text-md leading-tight">Blogs</h2>
   </div>
 
-        <h1 class="text-3xl font-geist sm:text-4xl md:text-5xl lg:text-3xl font-bold mb-6 md:mb-10 w-full lg:w-[939px] lg:h-auto "
+        <h1 class="text-3xl font-geist sm:text-4xl md:text-5xl lg:text-3xl font-bold mb-6 md:Amb-10 w-full lg:w-[939px] lg:h-auto "
       style={{ fontWeight: '400', letterSpacing: '-0.04em', color: '#000000', transform: 'rotate(-0.08deg)', lineHeight: '1.2'}}>
       Insights & Innovations:
       <br/>Let's Explore the <i className='text-3xl sm:text-4xl md:text-5xl lg:text-3xl 'style={{  fontFamily: "Playfair Display, serif",
