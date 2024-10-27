@@ -5,7 +5,7 @@
     font-size: 20px;
     font-weight: 500;
   }
-  
+   
   #home {
     background-image: url("/public/Home-BackGround.png");
     background-size: cover;
@@ -70,16 +70,16 @@
   #heroText h1 {
     font-family: "Playfair Display", serif;
     font-style: italic;
-    
     margin-left: 150px;
-    font-size: 70px;
-    font-weight: 500;
+    font-size: 76px;
+    font-weight: 300;
   }
-  #heroText h2 {
+
+  #heroText h3 {
    
-    font-size: 50px;
-    font-weight: 500;
-    margin: 5px 150px;
+    font-size: 70px;
+    font-weight: 300;
+    margin: -9px 150px;
     color: white;
   }
   #heroText p {
