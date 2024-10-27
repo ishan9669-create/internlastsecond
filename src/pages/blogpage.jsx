@@ -13,7 +13,7 @@
       <h2 class="text-sm sm:text-md md:text-md leading-tight">Blogs</h2>
   </div>
 
-        <h1 class="text-3xl font-geist sm:text-4xl md:text-5xl lg:text-3xl font-bold mb-6 md:Amb-10 w-full lg:w-[939px] lg:h-auto "
+        <h1 class="text-3xl font-geist sm:text-4xl md:text-5xl lg:text-3xl font-bold mb-6 md:mb-10 w-full lg:w-[939px] lg:h-auto "
       style={{ fontWeight: '400', letterSpacing: '-0.04em', color: '#000000', transform: 'rotate(-0.08deg)', lineHeight: '1.2'}}>
       Insights & Innovations:
       <br/>Let's Explore the <i className='text-3xl sm:text-4xl md:text-5xl lg:text-3xl 'style={{  fontFamily: "Playfair Display, serif",
@@ -166,7 +166,7 @@
     <div
       className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-[85vw] sm:w-full"
       style={{
-        backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.png')",
+        backgroundImage: "url('./austin-distel-744oGeqpxPQ-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '250px'
@@ -188,7 +188,7 @@
     <div
       className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105  w-[85vw] sm:w-full"
       style={{
-        backgroundImage: "url('./photo1.png')",
+        backgroundImage: "url('./dylan-calluy-JpflvzEl5cg-unsplash.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '250px'
