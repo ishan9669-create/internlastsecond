@@ -5,7 +5,7 @@
     font-size: 20px;
     font-weight: 500;
   }
-   
+  
   #home {
     background-image: url("/public/Home-BackGround.png");
     background-size: cover;
@@ -70,16 +70,16 @@
   #heroText h1 {
     font-family: "Playfair Display", serif;
     font-style: italic;
-    margin-left: 150px;
-    font-size: 76px;
-    font-weight: 300;
-  }
 
-  #heroText h3 {
-   
+    margin-left: 150px;
     font-size: 70px;
-    font-weight: 300;
-    margin: -9px 150px;
+    font-weight: 500;
+  }
+  #heroText h2 {
+
+    font-size: 50px;
+    font-weight: 500;
+    margin: 5px 150px;
     color: white;
   }
   #heroText p {
@@ -88,8 +88,8 @@
   }
   #heroImage img {
     padding-top: 70px;
-    height: 600px;
-    width: 900px;
+
+    width: 100%;
     
   }
   /* ------------------------------------------- */
@@ -137,12 +137,14 @@
       display: block;
       text-align: center;
       width: 960px; 
+      height: 100vh;
+    
       
     }
   
     #heroImage img {
       width: 100% !important;
-      height: auto !important;
+      height: 100% !important;
     }
   }
   
@@ -177,7 +179,7 @@
   
     #heroImage img {
       width: 100%;
-      height: auto;
+      height: 100%;
       padding-top: 10px;
     }
   }
